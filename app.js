@@ -36,12 +36,12 @@ const flujoInformacion = addKeyword(
   "info"
 ).addAnswer([
   "*Información sobre nuestro gimnasio* 🏋️‍♂️💪\n\n" +
-    "🌟 *Bienvenido a nuestro gimnasio* 🌟\n" +
-    "💡 *¿Por qué elegirnos?* \n" +
-    "- 🏋️‍♂️ *Equipos de última generación* para entrenamiento cardiovascular, fuerza y resistencia.\n" +
-    "- 🧘‍♀️ *Clases grupales* de Yoga, Zumba, Spinning y más, para que entrenes mientras te diviertes.\n" +
-    "- 💪 *Entrenadores certificados* que te guiarán en cada paso de tu camino hacia el éxito.\n" +
-    "- 🏅 *Ambiente motivador* y amigable donde todos pueden sentirse cómodos.\n\n",
+  "🌟 *Bienvenido a nuestro gimnasio* 🌟\n" +
+  "💡 *¿Por qué elegirnos?* \n" +
+  "- 🏋️‍♂️ *Equipos de última generación* para entrenamiento cardiovascular, fuerza y resistencia.\n" +
+  "- 🧘‍♀️ *Clases grupales* de Yoga, Zumba, Spinning y más, para que entrenes mientras te diviertes.\n" +
+  "- 💪 *Entrenadores certificados* que te guiarán en cada paso de tu camino hacia el éxito.\n" +
+  "- 🏅 *Ambiente motivador* y amigable donde todos pueden sentirse cómodos.\n\n",
   '_Para volver al menu principal introduce *"volver"*_ 🔄',
 ]);
 
@@ -63,27 +63,27 @@ const flujoDespedida = addKeyword([
 
 const flujoInfoBienvenida = addKeyword(["A"]).addAnswer(
   "🎁 *Descuento de Bienvenida* 🎁\n\n" +
-    "Obtén un 20% de descuento en tu primera membresía. ¡Aprovecha esta oportunidad!"
+  "Obtén un 20% de descuento en tu primera membresía. ¡Aprovecha esta oportunidad!"
 );
 
 const flujoInfoOfertas = addKeyword(["B"]).addAnswer(
   "💪 *Oferta 2x1* 💪\n\n" +
-    "Trae a un amigo y ambos obtienen acceso gratuito por una semana. ¡No entrenes solo!"
+  "Trae a un amigo y ambos obtienen acceso gratuito por una semana. ¡No entrenes solo!"
 );
 
 const flujoInfoEstudiantes = addKeyword(["C"]).addAnswer(
   "🎓 *Descuento para Estudiantes* 🎓\n\n" +
-    "Todos los estudiantes tienen un 15% de descuento en nuestras membresías. ¡Entrena mientras estudias!"
+  "Todos los estudiantes tienen un 15% de descuento en nuestras membresías. ¡Entrena mientras estudias!"
 );
 
 const flujoDuda = addKeyword(["1"]).addAnswer(
   [
     "🤔 *Tienes dudas sobre alguna oferta* 🤔\n\n" +
-      "Elige una de estas opciones:\n" +
-      "📌 *A* - Descuento de Bienvenida 🎁\n" +
-      "📌 *B* - Oferta 2x1 💪\n" +
-      "📌 *C* - Descuento para Estudiantes 🎓\n\n" +
-      "Responde con la letra de tu opción:",
+    "Elige una de estas opciones:\n" +
+    "📌 *A* - Descuento de Bienvenida 🎁\n" +
+    "📌 *B* - Oferta 2x1 💪\n" +
+    "📌 *C* - Descuento para Estudiantes 🎓\n\n" +
+    "Responde con la letra de tu opción:",
   ],
   { capture: true },
   async (ctx, { flowDynamic, fallBack }) => {
@@ -157,28 +157,28 @@ const flujoInformacionPrecio = addKeyword(
   .addAnswer("🎁 *Nuestros Bonos* 🎁")
   .addAnswer(
     "💥 *Bono General* 💥\n" +
-      "📝 *Precio:* 30€  \n⏳ *Duración:* Mensual\n" +
-      "\n🌟 *Incluye:* Acceso total al gimnasio.\n\n" +
-      "¡Disfruta de la libertad de entrenar en cualquier momento! 💪🔥"
+    "📝 *Precio:* 30€  \n⏳ *Duración:* Mensual\n" +
+    "\n🌟 *Incluye:* Acceso total al gimnasio.\n\n" +
+    "¡Disfruta de la libertad de entrenar en cualquier momento! 💪🔥"
   )
   .addAnswer(
     "🏋️‍♂️ *Bono Fitness* 🏋️‍♀️\n" +
-      "📝 *Precio:* 40€  \n⏳ *Duración:* Mensual\n" +
-      "\n💪 *Incluye:* Acceso completo al gimnasio + Evaluación física anual.\n\n" +
-      "¡Perfecto para monitorear tu progreso! 🔥💥"
+    "📝 *Precio:* 40€  \n⏳ *Duración:* Mensual\n" +
+    "\n💪 *Incluye:* Acceso completo al gimnasio + Evaluación física anual.\n\n" +
+    "¡Perfecto para monitorear tu progreso! 🔥💥"
   )
   .addAnswer(
     "💎 *Bono Premium* 💎\n" +
-      "📝 *Precio:* 50€  \n⏳ *Duración:* Mensual\n" +
-      "\n🎓 *Incluye:* Clases grupales, asesoramiento personalizado y zona premium.\n\n" +
-      "¡Ideal para maximizar tu rendimiento! 💥💪"
+    "📝 *Precio:* 50€  \n⏳ *Duración:* Mensual\n" +
+    "\n🎓 *Incluye:* Clases grupales, asesoramiento personalizado y zona premium.\n\n" +
+    "¡Ideal para maximizar tu rendimiento! 💥💪"
   )
   .addAnswer(
     "🎓 *Bono Estudiante* 🎓\n" +
-      "📝 *Precio:* 25€ (descuento para estudiantes)  \n⏳ *Duración:* Mensual\n" +
-      "\n🌟 *Incluye:* Acceso completo a todas las áreas del gimnasio.\n\n" +
-      "¡Mantén tu cuerpo en forma mientras estudias! 📚💪" +
-      '\n\n_Para volver al menu principal introduce *"volver"*_ 🔄'
+    "📝 *Precio:* 25€ (descuento para estudiantes)  \n⏳ *Duración:* Mensual\n" +
+    "\n🌟 *Incluye:* Acceso completo a todas las áreas del gimnasio.\n\n" +
+    "¡Mantén tu cuerpo en forma mientras estudias! 📚💪" +
+    '\n\n_Para volver al menu principal introduce *"volver"*_ 🔄'
   );
 
 const flujoContacto = addKeyword("contacto", "Contacto").addAnswer([
@@ -187,9 +187,9 @@ const flujoContacto = addKeyword("contacto", "Contacto").addAnswer([
   "📧 *Correo Electrónico:* contacto@gimnasio.com",
   "📍 *Ubicación:* Calle Ficticia #123, Ciudad Fit\n",
   "📲 *Síguenos en nuestras redes sociales* 📲\n" +
-    "🔵 (https://www.facebook.com/)\n" +
-    "🟣 (https://www.instagram.com/)\n" +
-    "⚫(https://www.tiktok.com/)\n",
+  "🔵 (https://www.facebook.com/)\n" +
+  "🟣 (https://www.instagram.com/)\n" +
+  "⚫(https://www.tiktok.com/)\n",
   'Si deseas chatear con un humano, introduce la palabra *"humano"* y le redirigiremos al chat con uno de nuestros trabajadores 👨‍💼',
   '\n\n_Para volver al menú principal introduce *"volver"*_ 🔄',
 ]);
@@ -208,11 +208,11 @@ const flujoAsesoria = addKeyword([
   "personalizado",
 ]).addAnswer(
   "🏋️‍♂️ *Asesoría Personalizada* 🏋️‍♀️\n\n" +
-    "Dime cuál es tu objetivo principal:\n" +
-    '*"A"* Perder peso\n' +
-    '*"B"* Ganar músculo\n' +
-    '*"C"* Mejorar resistencia\n\n' +
-    "Responde con el número de tu objetivo: ",
+  "Dime cuál es tu objetivo principal:\n" +
+  '*"A"* Perder peso\n' +
+  '*"B"* Ganar músculo\n' +
+  '*"C"* Mejorar resistencia\n\n' +
+  "Responde con el número de tu objetivo: ",
   { capture: true },
   async (ctx, { flowDynamic, fallBack }) => {
     // Comprobar si la respuesta es válida
