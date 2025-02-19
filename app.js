@@ -7,7 +7,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock');
 //Flujos hijos: flujoInformacionPrecio,
 // flujoContacto, flujoHumano,flujoDespedida,flujoActividades
 //Sub Hijos: flujoInfoBienvenida, flujoInfoOfertas, flujoInfoEstudiantes, flujoDuda
-
+//Cambio
 
 const flujoAgradecimiento = addKeyword('Gracias', 'gracias', 'Gracias!', '¡Gracias!', 'gracias!', '¡gracias!', 'Muchas gracias', 'muchas gracias',)
     .addAnswer('🌟¡Gracias a ti por confiar en nosotros!🌟')
