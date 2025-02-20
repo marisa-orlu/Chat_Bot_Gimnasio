@@ -316,7 +316,7 @@ const flujoMenu = addKeyword([
     }
     console.log(`El usuario respondió ${ctx.body}`);
   },
-  [
+  [ //flujos hijos
     flujoInformacion,
     flujoContacto,
     flujoHorarios,
@@ -332,7 +332,7 @@ const flujoMenu = addKeyword([
 
 const main = async () => {
   const adapterDB = new MockAdapter();
-  const adapterFlow = createFlow([
+  const adapterFlow = createFlow([ //Flujos hijos y padres
     flowBienvenida,
     flujoMenu,
     flujoContacto,
