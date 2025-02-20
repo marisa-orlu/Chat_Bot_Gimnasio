@@ -14,7 +14,7 @@ const MockAdapter = require("@bot-whatsapp/database/mock");
 // flujoContacto, flujoHumano,flujoDespedida,flujoActividades
 //Sub Hijos: flujoInfoBienvenida, flujoInfoOfertas, flujoInfoEstudiantes, flujoDuda
 
-const flujoAgradecimiento = addKeyword(
+const flujoAgradecimiento = addKeyword([
   "Gracias",
   "gracias",
   "Gracias!",
@@ -25,16 +25,16 @@ const flujoAgradecimiento = addKeyword(
   "muchas gracias",
   "GracIas",
   "ty"
-).addAnswer("🌟¡Gracias a ti por confiar en nosotros!🌟");
+]).addAnswer("🌟¡Gracias a ti por confiar en nosotros!🌟");
 
-const flujoInformacion = addKeyword(
+const flujoInformacion = addKeyword([
   "informacion",
   "información",
   "Informacion",
   "Información",
   "inf",
   "info"
-).addAnswer([
+]).addAnswer([
   "*Información sobre nuestro gimnasio* 🏋️‍♂️💪\n\n" +
   "🌟 *Bienvenido a nuestro gimnasio* 🌟\n" +
   "💡 *¿Por qué elegirnos?* \n" +
@@ -45,7 +45,7 @@ const flujoInformacion = addKeyword(
   '_Para volver al menu principal introduce *"volver"*_ 🔄',
 ]);
 
-const flujoHumano = addKeyword("humano", "Humano", "Humanos").addAnswer(
+const flujoHumano = addKeyword(["humano", "Humano", "Humanos"]).addAnswer(
   "Redirigiendo hacia uno de nuestros empleados... 👨‍💼"
 );
 
@@ -84,28 +84,33 @@ const flujoDuda = addKeyword(["1"]).addAnswer(
     "📌 *B* - Oferta 2x1 💪\n" +
     "📌 *C* - Descuento para Estudiantes 🎓\n\n" +
     "Responde con la letra de tu opción:",
+    '\n_Para volver al menú principal, introduce *"volver"* 🔄_',
   ],
   { capture: true },
   async (ctx, { flowDynamic, fallBack }) => {
-    // Comprobar si la respuesta es válida
     let mensaje = "";
-    if (ctx.body === "A" || ctx.body === "a") {
+
+    // Verifica la respuesta del usuario (A, B, C o volver)
+    const respuesta = ctx.body.toLowerCase();
+
+    if (respuesta === "a") {
       mensaje = flujoInfoBienvenida;
-    } else if (ctx.body === "B" || ctx.body === "b") {
+    } else if (respuesta === "b") {
       mensaje = flujoInfoOfertas;
-    } else if (ctx.body === "C" || ctx.body === "c") {
+    } else if (respuesta === "c") {
       mensaje = flujoInfoEstudiantes;
+    } else if (respuesta === "volver") {
+      // Mensaje para indicar que se está volviendo al menú principal
+      await flowDynamic("🔄 Volviendo al menú principal...")
+      return flujoMenu; // Simplemente retorna el flujo directamente
     } else {
-      // Si la opción es incorrecta, vuelve a preguntar
-      await flowDynamic(
-        "⚠️ *Opción inválida*. Por favor, elige una opción válida (A, B o C)."
-      );
-      // Usamos fallBack() para permitir que el flujo espere otra respuesta del usuario
-      return fallBack(); // No retornamos, sino que regresamos al punto de la pregunta
+      // Manejo de opción inválida
+      await flowDynamic("⚠️ *Opción inválida*. Por favor, elige una opción válida (A, B o C).");
+      return fallBack(); // Vuelve a las opciones iniciales
     }
-    // Si la respuesta es válida, muestra el mensaje adecuado
-    (await flowDynamic(mensaje)) +
-      '_Para volver al menu principal introduce *"volver"*_ 🔄';
+    
+    // Enviar el mensaje según la elección del usuario
+    await flowDynamic(mensaje);
   },
   [flujoInfoBienvenida, flujoInfoOfertas, flujoInfoEstudiantes]
 );
@@ -148,12 +153,12 @@ const flujoActividades = addKeyword([
   '_Para volver al menu principal introduce *"volver"*_ 🔄',
 ]);
 
-const flujoInformacionPrecio = addKeyword(
+const flujoInformacionPrecio = addKeyword([
   "precios",
   "precio",
   "Precio",
   "Precios"
-)
+])
   .addAnswer("🎁 *Nuestros Bonos* 🎁")
   .addAnswer(
     "💥 *Bono General* 💥\n" +
@@ -181,7 +186,7 @@ const flujoInformacionPrecio = addKeyword(
     '\n\n_Para volver al menu principal introduce *"volver"*_ 🔄'
   );
 
-const flujoContacto = addKeyword("contacto", "Contacto").addAnswer([
+const flujoContacto = addKeyword(["contacto", "Contacto"]).addAnswer([
   "📞 *Datos de Contacto* 📞\n",
   "📱 *Número de Teléfono:* +123 456 7890",
   "📧 *Correo Electrónico:* contacto@gimnasio.com",
@@ -194,7 +199,7 @@ const flujoContacto = addKeyword("contacto", "Contacto").addAnswer([
   '\n\n_Para volver al menú principal introduce *"volver"*_ 🔄',
 ]);
 
-const flujoHorarios = addKeyword("horarios", "Horarios", "horario").addAnswer([
+const flujoHorarios = addKeyword(["horarios", "Horarios", "horario"]).addAnswer([
   "⏰ *Horarios de Atención* ⏰\n\n",
   "🕘 Lunes a Viernes: 6:00 AM - 10:00 PM\n",
   "🕘 Sábados: 7:00 AM - 8:00 PM\n",
@@ -321,6 +326,7 @@ const flujoMenu = addKeyword([
     flujoActividades,
     flujoDespedida,
     flujoAsesoria,
+    flujoDuda,
   ]
 );
 
