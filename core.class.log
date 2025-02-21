@@ -1,0 +1,359 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '34601458528@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB022D9F1088674A13CBA',
+    participant: undefined
+  },
+  messageTimestamp: 1740126172,
+  pushName: 'Marissa',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'hola',
+  from: '34601458528'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_e4dc5e83-a999-420d-ba4c-15ce099ca061',
+  keyword: 'key_e7ca0b29-8f15-40dd-ac36-bdb1ea80a911',
+  answer: '✨ ¡Bienvenido al gimnasio! ✨\n' +
+    '\n' +
+    'Escribe *"menu"* para ver nuestras opciones. 💪',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'eaf90a11994f1c91808df9ea39e5c208'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '34601458528@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0059C59D37EF1615AFB',
+    participant: undefined
+  },
+  messageTimestamp: 1740126173,
+  pushName: 'Marissa',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
+  from: '34601458528'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_e37b5028-53af-4df4-a394-c4b7b46f2f37',
+  keyword: 'key_42249395-e1c5-4593-b547-908a58d9ce3b',
+  answer: 'Te proporciono el menú para que puedas interactuar con el: \n' +
+    '\n' +
+    '🏋️‍♂️ *Menú del Gimnasio* 🏋️‍♀️\n' +
+    '\n' +
+    '\n' +
+    '-Escribe *"informacion"* para conocer más sobre nosotros. ℹ️\n' +
+    '\n' +
+    '-Escribe *"contacto"* para ver nuestros datos de contacto. 📞\n' +
+    '\n' +
+    '-Escribe *"horarios"* para conocer nuestros horarios de atención. ⏰\n' +
+    '\n' +
+    '-Escribe *"precios"* para consultar precios. 💸\n' +
+    '\n' +
+    '-Escribe *"ofertas"* para ver las promociones y descuentos actuales. 💥\n' +
+    '\n' +
+    '-Escribe *"actividades"* para conocer las actividades que ofrecemos. 🏋️‍♀️\n' +
+    '\n' +
+    '-Escribe *"asesoria"* para recibir una guía personalizada y alcanzar tus metas. 💪\n' +
+    '\n' +
+    '-Escribe *"adios"* para despedirte y cerrar la conversación. 👋✨\n' +
+    '\n' +
+    '\n' +
+    '¡Elige una opción y te ayudaré con gusto! 😊',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object]
+    ],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4def7f5cbef84233758a92f8704b0885'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '34601458528@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0280C0099390CFB69E7',
+    participant: undefined
+  },
+  messageTimestamp: 1740126175,
+  pushName: 'Marissa',
+  broadcast: false,
+  message: Message {
+    conversation: 'ofertas',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'ofertas',
+  from: '34601458528'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_df11ca61-aa1e-4585-bc03-3933ba4bf26f',
+  keyword: 'key_6b81ff39-f582-4076-a037-725fa5548a58',
+  answer: '🎉 *Promociones y Ofertas Especiales* 🎉\n' +
+    '\n' +
+    '\n' +
+    '¡Tenemos varias ofertas increíbles para ti! 💥\n' +
+    '\n' +
+    '\n' +
+    '- *Descuento de bienvenida* 🎁: Obtén un 20% de descuento en tu primera membresía.\n' +
+    '\n' +
+    '- *Oferta 2x1* 💪: Trae a un amigo y ambos obtienen acceso gratuito por una semana.\n' +
+    '\n' +
+    '- *Descuento por estudiantes* 🎓: Todos los estudiantes tienen un 15% de descuento en nuestras membresías.\n' +
+    '\n' +
+    '\n' +
+    'Si tienes alguna duda sobre una oferta, introduce *"1"* para más información.\n' +
+    '\n' +
+    '\n' +
+    '_Para volver al menú principal, introduce *"volver"* 🔄_',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a6ee41d29da851ec9c4b5872ba7c3c96'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '34601458528@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0EBA3B24389D2A38E88',
+    participant: undefined
+  },
+  messageTimestamp: 1740126176,
+  pushName: 'Marissa',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '1',
+  from: '34601458528'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_490b8eb8-1115-4c06-a3a8-1cb31aa8e84e',
+  keyword: 'key_2d53574c-4111-450e-bfa0-e51be0b3c339',
+  answer: '🤔 *Tienes dudas sobre alguna oferta* 🤔\n' +
+    '\n' +
+    'Elige una de estas opciones:\n' +
+    '📌 *A* - Descuento de Bienvenida 🎁\n' +
+    '📌 *B* - Oferta 2x1 💪\n' +
+    '📌 *C* - Descuento para Estudiantes 🎓\n' +
+    '\n' +
+    'Responde con la letra de tu opción:\n' +
+    '\n' +
+    '_Para volver al menú principal, introduce *"volver"* 🔄_',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '3140696a6fb62f17447e73f661a32003'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '34601458528@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB03D9FD02A0C954FAC33',
+    participant: undefined
+  },
+  messageTimestamp: 1740126178,
+  pushName: 'Marissa',
+  broadcast: false,
+  message: Message {
+    conversation: 'volver',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'volver',
+  from: '34601458528'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '34601458528@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB077BE69F1A38A53059B',
+    participant: undefined
+  },
+  messageTimestamp: 1740126185,
+  pushName: 'Marissa',
+  broadcast: false,
+  message: Message {
+    conversation: 'ofertas',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'ofertas',
+  from: '34601458528'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_df11ca61-aa1e-4585-bc03-3933ba4bf26f',
+  keyword: 'key_6b81ff39-f582-4076-a037-725fa5548a58',
+  answer: '🎉 *Promociones y Ofertas Especiales* 🎉\n' +
+    '\n' +
+    '\n' +
+    '¡Tenemos varias ofertas increíbles para ti! 💥\n' +
+    '\n' +
+    '\n' +
+    '- *Descuento de bienvenida* 🎁: Obtén un 20% de descuento en tu primera membresía.\n' +
+    '\n' +
+    '- *Oferta 2x1* 💪: Trae a un amigo y ambos obtienen acceso gratuito por una semana.\n' +
+    '\n' +
+    '- *Descuento por estudiantes* 🎓: Todos los estudiantes tienen un 15% de descuento en nuestras membresías.\n' +
+    '\n' +
+    '\n' +
+    'Si tienes alguna duda sobre una oferta, introduce *"1"* para más información.\n' +
+    '\n' +
+    '\n' +
+    '_Para volver al menú principal, introduce *"volver"* 🔄_',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a6ee41d29da851ec9c4b5872ba7c3c96'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '34601458528@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0E669E8B439D7D42735',
+    participant: undefined
+  },
+  messageTimestamp: 1740126187,
+  pushName: 'Marissa',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '1',
+  from: '34601458528'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_490b8eb8-1115-4c06-a3a8-1cb31aa8e84e',
+  keyword: 'key_2d53574c-4111-450e-bfa0-e51be0b3c339',
+  answer: '🤔 *Tienes dudas sobre alguna oferta* 🤔\n' +
+    '\n' +
+    'Elige una de estas opciones:\n' +
+    '📌 *A* - Descuento de Bienvenida 🎁\n' +
+    '📌 *B* - Oferta 2x1 💪\n' +
+    '📌 *C* - Descuento para Estudiantes 🎓\n' +
+    '\n' +
+    'Responde con la letra de tu opción:\n' +
+    '\n' +
+    '_Para volver al menú principal, introduce *"volver"* 🔄_',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '3140696a6fb62f17447e73f661a32003'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '34601458528@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB047C19F4FE28CAC0E21',
+    participant: undefined
+  },
+  messageTimestamp: 1740126190,
+  pushName: 'Marissa',
+  broadcast: false,
+  message: Message {
+    conversation: 'volver',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'volver',
+  from: '34601458528'
+}

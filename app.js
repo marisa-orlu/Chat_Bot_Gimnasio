@@ -77,7 +77,7 @@ const flujoInfoEstudiantes = addKeyword(["C"]).addAnswer(
 );
 
 const flujoDuda = addKeyword(["1"]).addAnswer(
-  [
+  [ 
     "🤔 *Tienes dudas sobre alguna oferta* 🤔\n\n" +
     "Elige una de estas opciones:\n" +
     "📌 *A* - Descuento de Bienvenida 🎁\n" +
@@ -87,30 +87,28 @@ const flujoDuda = addKeyword(["1"]).addAnswer(
     '\n_Para volver al menú principal, introduce *"volver"* 🔄_',
   ],
   { capture: true },
-  async (ctx, { flowDynamic, fallBack }) => {
-    let mensaje = "";
-
+  async (ctx, { flowDynamic, fallBack, gotoFlow }) => {
     // Verifica la respuesta del usuario (A, B, C o volver)
     const respuesta = ctx.body.toLowerCase();
 
-    if (respuesta === "a") {
-      mensaje = flujoInfoBienvenida;
-    } else if (respuesta === "b") {
-      mensaje = flujoInfoOfertas;
-    } else if (respuesta === "c") {
-      mensaje = flujoInfoEstudiantes;
-    } else if (respuesta === "volver") {
-      // Mensaje para indicar que se está volviendo al menú principal
-      await flowDynamic("🔄 Volviendo al menú principal...")
-      return flujoMenu; // Simplemente retorna el flujo directamente
+    if(respuesta === "volver"){
+      // Para volver al menú principal correctamente
+      await flowDynamic("🔄 Volviendo al menú principal...");
+      return gotoFlow(flujoMenu);
+    } else if(respuesta === "a"){
+      // Mostrar el contenido de flujoInfoBienvenida
+      return gotoFlow(flujoInfoBienvenida);
+    } else if(respuesta === "b"){
+      // Corregido: era "respuesta" no "mensaje"
+      return gotoFlow(flujoInfoOfertas);
+    } else if(respuesta === "c"){
+      // Corregido: era "respuesta" no "mensaje"
+      return gotoFlow(flujoInfoEstudiantes);
     } else {
       // Manejo de opción inválida
       await flowDynamic("⚠️ *Opción inválida*. Por favor, elige una opción válida (A, B o C).");
       return fallBack(); // Vuelve a las opciones iniciales
     }
-    
-    // Enviar el mensaje según la elección del usuario
-    await flowDynamic(mensaje);
   },
   [flujoInfoBienvenida, flujoInfoOfertas, flujoInfoEstudiantes]
 );
